@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Agenda Quora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="agenda-app">
+    <aside class="sidebar">
+      <div class="logo">Q</div>
+      <nav>
+        <button class="nav-btn active" id="agendaTabBtn">Agenda</button>
+        <button class="nav-btn" id="tasksTabBtn">Tarefas</button>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <header class="topbar">
+        <span class="empresa">Quora</span>
+      </header>
+      <section class="content">
+        <div class="agenda-panel" id="agendaPanel">
+          <div class="calendar-panel">
+            <div class="calendar-header">
+              <button id="prevMonth">&lt;</button>
+              <span id="monthYear"></span>
+              <button id="nextMonth">&gt;</button>
+            </div>
+            <ul class="calendar-days" id="calendarDays">
+            </ul>
+          </div>  
+          <div class="agenda-content">
+            <h2 id="selectedDateTitle">Compromissos do dia</h2>
+            <ul id="eventsList"></ul>
+            <div class="add-event">
+              <input type="text" id="eventInput" placeholder="Novo compromisso...">
+              <button id="addEventBtn">Adicionar</button>
+            </div>
+            <div class="notes-section">
+              <label for="notesInput">Notas do dia:</label>
+              <textarea id="notesInput" placeholder="Digite suas notas aqui..."></textarea>
+              <button id="saveNoteBtn">Salvar Nota</button>
+              <ul id="notesList"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="tasks-panel" id="tasksPanel" style="display:none;">
+          <h2>Tarefas</h2>
+          <div class="add-task">
+            <input type="text" id="taskInput" placeholder="Nova tarefa...">
+            <button id="addTaskBtn">Adicionar</button>
+          </div>
+          <ul id="tasksList"></ul>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>
